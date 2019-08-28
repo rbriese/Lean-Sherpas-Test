@@ -464,8 +464,8 @@ header {
     left: 0px;
     bottom: -16px; }
   .title.small {
-    font-size: 28px;
-    line-height: 38px; }
+    font-size: 32px;
+    line-height: 42px; }
     @media (max-width: 992px) {
       .title.small {
         font-size: 24px;
@@ -482,6 +482,10 @@ header {
     background: #0296D7; }
   .title.blue:before {
     background: #0296D7; }
+  .title.secondary-blue:after {
+    background: #00CCFF; }
+  .title.secondary-blue:before {
+    background: #00CCFF; }
   .title.white:after {
     background: #fff; }
   .title.white:before {
@@ -508,10 +512,15 @@ header {
       background-size: contain;
       background-position: bottom; } }
   .hero .title {
-    margin-bottom: 44px; }
+    margin-bottom: 16px;
+    color: #00CCFF; }
+    .hero .title:after {
+      display: none; }
+    .hero .title:before {
+      display: none; }
     @media (max-width: 992px) {
       .hero .title {
-        margin-bottom: 36px; } }
+        margin-bottom: 16px; } }
   .hero .text {
     font-size: 20px;
     color: #04162C;
@@ -567,21 +576,25 @@ header {
         margin-bottom: 48px; } }
   .services .top {
     display: flex;
-    align-items: center; }
-    @media (max-width: 992px) {
-      .services .top img {
-        width: 32px; } }
-    @media (max-width: 767px) {
-      .services .top img {
-        width: 24px; } }
+    align-items: center;
+    flex-direction: column; }
+    .services .top img {
+      height: 65px; }
+      @media (max-width: 992px) {
+        .services .top img {
+          height: 50px; } }
+      @media (max-width: 767px) {
+        .services .top img {
+          height: auto;
+          width: 50px; } }
   .services .yellow-title {
     font-weight: bold;
-    font-size: 20px;
-    color: #FF9E22;
-    padding-left: 20px; }
+    font-size: 24px;
+    color: #00CCFF;
+    padding: 12px 0 0; }
     @media (max-width: 992px) {
       .services .yellow-title {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 1.2; } }
   .services .block-title {
     font-weight: bold;
@@ -630,12 +643,12 @@ header {
     @media (max-width: 767px) {
       .trainings .block {
         padding: 0px; } }
+    .trainings .block.talk .image-cover {
+      background-color: #00CCFF; }
+    .trainings .block.training .image-cover {
+      background-color: #404778; }
     .trainings .block.old .information {
-      color: rgba(0, 0, 0, 0.3); }
-      .trainings .block.old .information p:after {
-        background: rgba(0, 0, 0, 0.3); }
-    .trainings .block.old p.date {
-      background: #AEAEAE; }
+      color: rgba(255, 255, 255, 0.5); }
     .trainings .block.old .image-cover {
       position: relative; }
       .trainings .block.old .image-cover:after {
@@ -667,8 +680,6 @@ header {
       .trainings .title {
         margin-bottom: 48px; } }
   .trainings .image-cover {
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     height: 200px;
     display: flex;
@@ -677,46 +688,32 @@ header {
     position: relative;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-position: center !important; }
+    background-position: center !important;
+    background-image: none !important;
+    justify-content: flex-start;
+    padding: 16px;
+    margin-bottom: 16px; }
     @media (max-width: 767px) {
       .trainings .image-cover {
-        height: 280px; } }
-    .trainings .image-cover p.date {
-      z-index: 10;
-      background: #04162C;
-      padding: 4px 6px;
-      border-radius: 20px;
-      color: #fff;
-      font-size: 14px;
-      top: 16px;
-      right: 16px;
-      letter-spacing: 0;
-      text-align: center;
-      line-height: 15px;
-      position: absolute;
-      font-weight: bold; }
+        height: 200px; } }
   .trainings .information {
     font-size: 16px;
-    color: #0296D7;
     letter-spacing: 0;
     line-height: 25px;
     display: flex;
-    margin: 12px 0 6px;
-    font-weight: bold; }
+    font-weight: bold;
+    flex-direction: column;
+    color: #fff; }
     .trainings .information p {
-      margin-right: 32px;
       position: relative; }
-      .trainings .information p:last-child:after {
-        display: none; }
-      .trainings .information p:after {
-        background: #0296D7;
-        width: 3px;
-        height: 3px;
-        border-radius: 3px;
-        content: '';
-        position: absolute;
-        right: -18px;
-        top: 10px; }
+  .trainings .type {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 72px; }
+  .trainings .location {
+    font-weight: 400; }
+  .trainings .date {
+    font-size: 18px; }
   .trainings .block-title {
     font-size: 20px;
     color: #04162C;
@@ -779,7 +776,13 @@ header {
         margin-bottom: 24px; } }
     .about .blue-block .text {
       color: #FFFFFF;
-      padding-bottom: 0px; }
+      padding-bottom: 0px;
+      font-size: 18px;
+      line-height: 26px; }
+      @media (max-width: 767px) {
+        .about .blue-block .text {
+          font-size: 16px;
+          line-height: 24px; } }
     .about .blue-block .title {
       color: #fff;
       margin-bottom: 43px; }
@@ -792,8 +795,8 @@ header {
       .about ul li {
         margin-bottom: 24px; } }
   .about .block-title {
-    font-size: 20px;
-    color: #04162C;
+    font-size: 24px;
+    color: #00CCFF;
     letter-spacing: 0;
     margin-bottom: 6px;
     font-weight: bold; }
